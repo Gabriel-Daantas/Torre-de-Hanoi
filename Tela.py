@@ -1,3 +1,4 @@
+from Cor import Cor
 from Disco import Disco
 from Torre import Torre
 import os
@@ -16,7 +17,7 @@ def criarDiscos():
     
     if nmr_discos < 3 or nmr_discos > 8:
         clear()
-        print('ERRO, VALOR INDISPONÍVEL!')
+        print(Cor.vermelho + 'ERRO, VALOR INDISPONÍVEL!')
         input('\nPressione qualquer tecla para continuar.')
         criarDiscos()
     else:
@@ -36,7 +37,7 @@ def iniciarTorre():
 
 def desenhoTorres():
     clear()
-    print('\nTorre A\n')
+    print('\n\033[31m'+'Torre A'+'\033[0;0m\n')
     torreA.mostrarTorre()
     
     print('\nTorre B\n')
